@@ -8,6 +8,7 @@
     "start": "react-native start",
     "postinstall": "patch-package",
     "test": "jest",
+    "test:coverage": "jest --colors --coverage test",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
