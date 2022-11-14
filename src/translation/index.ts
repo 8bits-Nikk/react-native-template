@@ -1,8 +1,6 @@
 import {I18nManager} from 'react-native';
 import * as RNLocalize from 'react-native-localize';
 import {I18n} from 'i18n-js';
-// import en from './locals/en.json';
-// import fr from './locals/fr.json';
 
 export const SUPPORTED_LANGUAGES = {
   EN: 'en',
@@ -46,7 +44,8 @@ export const setI18nConfig = () => {
   // update layout direction
   I18nManager.forceRTL(isRTL);
   // set i18n-js config
-  i18n.translations = {[languageTag]: translationGetters[languageTag]()};
+  // i18n.translations = {[languageTag]: translationGetters[languageTag]()};
+  i18n.translations = {[languageTag]: getTranslationFiles(languageTag)};
 
   i18n.locale = languageTag;
   i18n.enableFallback = true;
